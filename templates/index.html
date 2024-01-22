@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <h1>Adicionar Novo Animal</h1>
+
+    <form action="{{ url_for('adicionar_produto') }}" method="post">
+        <input type="text" name="nome" placeholder="Animal">
+        <input type="text" name="descricao" placeholder="Tipo Ração">
+        <input type="number" name="preco" placeholder="Preço">
+        <input type="number" name="estoque" placeholder="Estoque">
+        <input type="submit" value="Adicionar">
+    </form><h1>Produtos Disponíveis</h1>
+    <ul>
+        {% for produto in produtos %}
+            <li>{{ produto[1] }} - Estoque: {{ produto[4] }}</li>
+        {% endfor %}
+    </ul>
+    <!-- Link para a página adicionar_produto -->
+    <a href="{{ url_for('adicionar_produto') }}">Adicionar Novo Produto</a>
+</body>
+</html>

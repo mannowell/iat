@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Novo Produto</title>
+</head>
+<body>
+    <h1>Adicionar Alimento</h1>
+    <form method="post" action="{{ url_for('adicionar_produto') }}">
+        <label for="racao">Alimento:</label>
+        <input type="text" id="racao" name="racao" required>
+
+        <label for="descricao">Tipo de Animal:</label>
+        <input type="text" id="descricao" name="descricao" required>
+
+        <label for="preco">Marca:</label>
+        <input type="number" id="preco" name="preco" step="0.01" required>
+
+        <label for="estoque">Empresa:</label>
+        <input type="number" id="estoque" name="estoque" required>
+
+        <button type="submit">Adicionar Produto</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Novo Produto</title>
+</head>
+<body>
+    <h1>Adicionar Novo Produto</h1>
+    <form method="post" action="{{ url_for('adicionar_produto') }}">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" required>
+
+        <label for="preco">Marca:</label>
+        <input type="number" id="preco" name="preco" step="0.01" required>
+
+        <label for="estoque">Empresa:</label>
+        <input type="number" id="estoque" name="estoque" required>
+
+        <button type="submit">Adicionar Produto</button>
+    </form>
+</body>
+</html>
